@@ -28,7 +28,7 @@ public class ParentUserController
 	@ResponseBody()
 	public Map<String,String> searchCourseInfo()
 	{
-		Map<String,String> ret=new HashMap();
+		Map<String,String> ret=new HashMap<String,String>();
 		
 		return ret;
 	}
@@ -67,4 +67,15 @@ public class ParentUserController
 		return mav;
 	}
 
+	
+	/**
+	 * 申请试听
+	 */
+	public Map<String,String> applyForCourse(String courseName,HttpSession session)
+	{
+		Map<String,String> ret=new HashMap();
+		String name=(String)session.getAttribute("userName");
+		
+		return ret;
+	}
 }

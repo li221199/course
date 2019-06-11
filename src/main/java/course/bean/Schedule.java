@@ -1,4 +1,4 @@
-package course;
+package course.bean;
 
 /**
  * 课程安排

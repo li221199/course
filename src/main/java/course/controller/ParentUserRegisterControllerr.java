@@ -27,8 +27,7 @@ class ParentUserRegisterController extends RegisterTemplate
 	{
 		return template(user, result);
 	}
-	
-	
+		
 	/**
 	 *  返回注册表单页面
 	 */
