@@ -1,11 +1,12 @@
 package course.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import course.bean.ParentUser;
 import course.bean.User;
 import course.dao.ParentUserDao;
-
+@Service
 public class ParentUserService
 {
 	/**

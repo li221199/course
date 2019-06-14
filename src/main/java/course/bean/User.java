@@ -13,7 +13,9 @@ public class User
 	protected String password;
 	@Email(message="邮箱格式不正确")
 	protected String e_mail;
+	@NotNull
 	protected String phone;
+	@NotNull
 	protected String contact;// 联系方式
 
 	public String getUserName()

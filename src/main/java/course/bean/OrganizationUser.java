@@ -1,10 +1,18 @@
 package course.bean;
 
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Range;
+
 public class OrganizationUser extends User
 {
+	@NotNull
 	private String realm;//教育领域
+	@NotNull
 	private String id;//标识码
+	@NotNull
 	private String address;//店面地址
+	@Range(min=1,max=100,message="超出合理年龄")
 	private String age;//教育合适年龄
 	public String getRealm()
 	{

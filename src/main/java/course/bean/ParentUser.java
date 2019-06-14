@@ -1,6 +1,9 @@
 package course.bean;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+
+import org.hibernate.validator.constraints.Range;
 
 public class ParentUser extends User
 {
@@ -16,8 +19,11 @@ public class ParentUser extends User
 
 	@NotNull
 	private String childName;
+	@Range(min=1,max=100,message="超出合理年龄")
 	private String age;
+	@Pattern(regexp="[男女]$")
 	private String childSex;
+	@NotNull
 	private String parentName;
 
 	public String getChildName()
