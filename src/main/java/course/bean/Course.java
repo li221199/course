@@ -11,6 +11,8 @@ import javax.validation.constraints.NotNull;
 public class Course
 {
 	@NotNull
+	private String courseId;
+	@NotNull
 	private String time;		//上课时间
 	@NotNull
 	private String location;	//上课地点
@@ -48,5 +50,11 @@ public class Course
 	}
 	public void setWork(String work) {
 		this.work = work;
+	}
+	public String getCourseId() {
+		return courseId;
+	}
+	public void setCourseId(String courseId) {
+		this.courseId = courseId;
 	}
 }

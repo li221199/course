@@ -18,6 +18,10 @@ import org.hibernate.validator.constraints.Range;
 public class Subject
 {
 	@NotNull
+	private String classID;		//课程编号
+	@NotNull
+	private String classname;
+	@NotNull
 	private String type;    //课程类型
 	@NotNull
 	private String area;	//所在地区
@@ -25,8 +29,6 @@ public class Subject
 	private String age;		//适合上课的孩子年龄
 	@Pattern(regexp="[1-9][0-9]{0,}")
 	private String price;	//上课费用
-	@Valid
-	private	List<Course> course;
 	public String getType() {
 		return type;
 	}
@@ -51,10 +53,17 @@ public class Subject
 	public void setPrice(String price) {
 		this.price = price;
 	}
-	public List<Course> getCourse() {
-		return course;
+	public String getClassname() {
+		return classname;
 	}
-	public void setCourse(List<Course> course) {
-		this.course = course;
+	public void setClassname(String classname) {
+		this.classname = classname;
 	}
+	public String getClassID() {
+		return classID;
+	}
+	public void setClassID(String classID) {
+		this.classID = classID;
+	}
+	
 }
