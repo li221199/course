@@ -81,14 +81,13 @@ public class UserServiceTest
 		course3.setLocation("A209");
 		course3.setTeacher("sb");
 		course3.setContent("eng");
-		
+		List<String> idList=new LinkedList();
 		
 		assertEquals(true, testcoursedao.addCourseList(course1));
 		assertEquals(true, testcoursedao.addCourseList(course3));
 		assertEquals(true, testcoursedao.changeCourseList("3", course2));
-		assertEquals(true, testcoursedao.deletCourseList("3"));
-		assertEquals(true, testcoursedao.deletCourseList("3"));
 		assertEquals(true, testcoursedao.deletCourseList("2"));
+		assertEquals(course1, testcoursedao.gainCourse(""));
 		
 		
 	}
